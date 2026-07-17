@@ -4,9 +4,7 @@
 
 clear all, close all
 
-addpath('D:\Matlab\Multiprecision Computing Toolbox')
-% IMPORTANT: Replace this path with the installation directory of your
-% Advanpix Multiprecision Computing Toolbox.
+myaddpath;
 
 t = logspace(-3, 0, 31);                 % time                      
 N = 1e3; Z = logspace(-6,6,N); Z = Z(:); % discretization
