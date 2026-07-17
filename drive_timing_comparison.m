@@ -32,7 +32,7 @@ param.real = 1;                  % data is real-valued
 
 [xi, ratfun, misfit, out] = rkfit(F, D, u, xistart, param);  % xi is the set of RKFIT poles
  
-load('femdata181302.mat','C','M','q');   % load FEM matrices C, M and vector q (size 181302)
+load('femdata181302.mat','C','M','q');   % load FEM matrices C, M and vector q (size 181302). These are available at the Suite Sparse collection (see README.md)
 C = C + tril(C,-1)';
 M = M + tril(M,-1)';
 
