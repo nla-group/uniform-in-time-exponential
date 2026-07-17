@@ -22,7 +22,7 @@ end
 M = speye(1000);            % M is the identity matrix in this example
 e0 = M\q;                   % initial vector e0 = e(0)
 Mnorm = sqrt((e0.')*M*e0);  % normalization const
-K2M = 1;                    % K2M is the condition number of M
+K2M = condest(M);                    % K2M is the condition number of M
 N = 1e3; Z = logspace(-6,6,N); Z = Z(:);  % discretized sample pts
 
 f = exp(-t.*Z);   % functions to be fitted
