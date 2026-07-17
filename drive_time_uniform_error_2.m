@@ -9,7 +9,7 @@ myaddpath;
 
 mp.Digits(128) % set working precision to 128 digits
 
-%% Time ratio tmax/tmin = 10^1
+%% Time ratio tmax/tmin = 10^2
 t = logspace(-2, 0, 21);   % time
 C2 = 2.67;                 % optimal linear factor for concentrated real poles
 
