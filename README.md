@@ -5,6 +5,8 @@ These are the MATLAB codes accompanying the paper of the above title. Some of th
 * Advanpix Multiprecision Toolbox available at https://www.advanpix.com/
 * MATLAB Rational Krylov Toolbox available at https://guettel.com/rktoolbox/
 
+Two of the examples also require the matrices $C,M,q$ in the `TEM181302` problem available from https://sparse.tamu.edu/Guettel/TEM181302
+
 The figures in the paper are reproduced as follows:
 
 * Figure 1: Run `drive_weight_vs_unweighted.m`
