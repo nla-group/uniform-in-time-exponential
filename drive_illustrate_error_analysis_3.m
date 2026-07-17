@@ -4,9 +4,7 @@
 
 clear all, close all
 
-addpath('D:\Matlab\Multiprecision Computing Toolbox')
-% IMPORTANT: Replace this path with the installation directory of your
-% Advanpix Multiprecision Computing Toolbox.
+myaddpath;
 
 mp.Digits(128) % set working precision to 128 digits
 
