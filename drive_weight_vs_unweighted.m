@@ -3,8 +3,8 @@
 % to be in the MATLAB path.
 
 clear all, close all
-unzip('http://guettel.com/rktoolbox/rktoolbox.zip'); 
-cd('rktoolbox'); addpath(fullfile(cd)); savepath
+
+myaddpath;
 
 t = logspace(-3,0,21);           % time points
 C3 = 4.31;                       % optimal linear constant for t, used for unweighted approximation
