@@ -10,4 +10,13 @@ The figures in the paper are reproduced as follows:
 
 * Figure 1: Run `drive_weight_vs_unweighted.m`
 * Figure 2: Run `drive_contour_plot.m`
-
+* Figure 3: Run `drive_three_approximants.m`
+* Figure 4 (subplot 1): Run `drive_time_uniform_error_1.m`
+* Figure 4 (subplot 2): Run `drive_time_uniform_error_2.m`
+* Figure 4 (subplot 3): Run `drive_time_uniform_error_3.m`
+* Figure 4 (subplot 4): Run `drive_time_uniform_error_4.m`
+* Figure 5 (subplot 1): Run `drive_illustrate_error_analysis_1.m`
+* Figure 5 (subplot 2): Run `drive_illustrate_error_analysis_2.m`
+* Figure 5 (subplot 3): Run `drive_illustrate_error_analysis_3.m`
+* Figure 6: Run `drive_timing_comparison.m`
+* Figure 7: Run `drive_tem.m`
