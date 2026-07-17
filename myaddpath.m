@@ -1,4 +1,4 @@
-%% User-Speficied Path
+%% User-Specified Path
 rkfit_path = 'D:\Matlab\rktoolbox';
 % IMPORTANT: Replace this path with the installation directory of your
 % RKFIT Toolbox.
