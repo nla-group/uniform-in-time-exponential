@@ -13,7 +13,7 @@ myaddpath;
 
 mp.Digits(128) % set working precision to 128 digits
 
-load('femdata181302.mat','C','M','q');  % load the matrices C, M and vector q
+load('femdata181302.mat','C','M','q');  % load the matrices C, M and vector q. These are available at the Suite Sparse collection (see README.md)
 C = C + tril(C,-1)';
 M = M + tril(M,-1)';
 % Me'(t) + Ce(t) = 0, for all t, with Me(0) = q.
