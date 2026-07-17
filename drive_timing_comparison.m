@@ -5,13 +5,7 @@
 
 clear all, close all
 
-addpath('D:\Matlab\rktoolbox')
-% IMPORTANT: Replace this path with the installation directory of your
-% RKFIT Toolbox.
-
-addpath('D:\Matlab\Multiprecision Computing Toolbox') 
-% IMPORTANT: Replace this path with the installation directory of your
-% Advanpix Multiprecision Computing Toolbox.
+myaddpath;
 
 t = logspace(-6, -3, 31);  % time
 
