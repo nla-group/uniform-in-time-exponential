@@ -1,11 +1,10 @@
 ## Uniform-in-time rational approximation of the matrix exponential with real poles
 
-These are the MATLAB codes accompanying the paper of the above title. Some of these files require the following two additional toolboxes to be in the MATLAB path:
+These are the MATLAB codes accompanying the paper of the above title. Some of these files have additional requirements: 
 
-* Advanpix Multiprecision Toolbox available at https://www.advanpix.com/
-* MATLAB Rational Krylov Toolbox available at https://guettel.com/rktoolbox/
-
-Two of the examples also require the matrices $C,M,q$ in the `TEM181302` problem available from https://sparse.tamu.edu/Guettel/TEM181302
+* Advanpix Multiprecision Toolbox available at https://www.advanpix.com/ needs to be in the MATLAB path
+* MATLAB Rational Krylov Toolbox available at https://guettel.com/rktoolbox/ needs to be in the MATLAB path
+* The matrices $C,M,q$ available from https://sparse.tamu.edu/Guettel/TEM181302 need to be in the same folder
 
 The figures in the paper are reproduced as follows:
 
