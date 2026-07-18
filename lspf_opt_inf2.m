@@ -11,7 +11,7 @@ function [pols, res, total_err, s, interp] = lspf_opt_inf2(m, x, t)
 % The residues are obtained by the interpolation condition.
 % The total error bound (total_err) and refined pole-interval (s)
 % are also returned.
-% We note that the only difference to the algorithm lspf_opt_inf.m is that
+% We note that the key difference to the algorithm lspf_opt_inf.m is that
 % we now minimize the total error bound rather than the scalar bound only.
 
 mp.Digits(128) % set working precision to 128 digits
@@ -24,18 +24,22 @@ s_1 = log10([m/sqrt(2)/(1*max(t)) , m/sqrt(2)/(1*min(t))]);
 
 % initial guess taking care of the inaccuracy at late time points, which
 % happens sometimes
-s_2 = log10([m/sqrt(2)/(3*max(t)) , m/sqrt(2)/(1*min(t))]); 
+s_2 = log10([m/sqrt(2)/(2*max(t)) , m/sqrt(2)/(1*min(t))]);
+s_3 = log10([m/sqrt(2)/(3*max(t)) , m/sqrt(2)/(1*min(t))]); 
 
 if 1
     disp('LSPF_OPTIM: starting 2-dim optim')
     disp(fun(s_1, E,x,m))
     s1 = fminsearch(@(ss) fun(ss, E,x,m),s_1);
     s2 = fminsearch(@(ss) fun(ss, E,x,m),s_2);
+    s3 = fminsearch(@(ss) fun(ss, E,x,m),s_3);
     % choose the pole-interval with a better initial point
-    if fun(s1, E,x,m)>fun(s2, E,x,m)
-        s = s2;
-    else
+    if fun(s1, E,x,m)==min([fun(s1, E,x,m),fun(s2, E,x,m),fun(s3, E,x,m)])
         s = s1;
+    elseif fun(s2, E,x,m)==min([fun(s1, E,x,m),fun(s2, E,x,m),fun(s3, E,x,m)])
+        s = s2;
+    else 
+        s = s3;
     end
 end
 
