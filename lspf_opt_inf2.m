@@ -20,27 +20,23 @@ x = x(:); t = t(:).';
 E = exp(-x*t); % exact values to be fitted
 
 % initial guess for the finite condenser plate, informed by Andersson (log10 of boundaries)
-s = log10([m/sqrt(2)/(1*max(t)) , m/sqrt(2)/(1*min(t))]); 
-options = optimset('MaxIter', 1500, 'TolX', 1e-8, 'TolFun', 1e-8);
+s_1 = log10([m/sqrt(2)/(1*max(t)) , m/sqrt(2)/(1*min(t))]); 
+
+% initial guess taking care of the inaccuracy at late time points, which
+% happens sometimes
+s_2 = log10([m/sqrt(2)/(3*max(t)) , m/sqrt(2)/(1*min(t))]); 
 
 if 1
     disp('LSPF_OPTIM: starting 2-dim optim')
-    disp(fun(s, E,x,m))
-    s = fminsearch(@(ss) fun(ss, E,x,m),s,options);
-    disp(fun(s, E,x,m))
-    %{
-    disp('LSPF_OPTIM: follow up with alternating 1-dim optim')
-    for it = 1:5
-        s1 = fminsearch(@(ss) fun([ss,s(2)], E,x,m),s(1),options);
-        s2 = fminsearch(@(ss) fun([s1,ss], E,x,m),s(2),options);
-        s = [s1,s2];
-        disp(fun(s, E,x,m))
+    disp(fun(s_1, E,x,m))
+    s1 = fminsearch(@(ss) fun(ss, E,x,m),s_1);
+    s2 = fminsearch(@(ss) fun(ss, E,x,m),s_2);
+    % choose the pole-interval with a better initial point
+    if fun(s1, E,x,m)>fun(s2, E,x,m)
+        s = s2;
+    else
+        s = s1;
     end
-
-    disp('LSPF_OPTIM: 2-dim optim once more')
-    s = fminsearch(@(ss) fun(ss,E,x,m),s,options);
-    disp(fun(s, E,x,m))
-    %}
 end
 
 % Find poles and interpolation nodes from the refined condenser
