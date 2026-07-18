@@ -15,5 +15,6 @@ The figures in the paper are reproduced by the following scripts:
 * Figure 5 (subplots `x=1,...,3`): `drive_illustrate_error_analysis_x.m`
 * Figure 6: `drive_timing_comparison.m`
 * Figure 7: `drive_tem.m`
+* Figure 8: `total_error_bound.m`
 
 In addition, we provide the script `myaddpath.m`, which should be modified to include the paths with the installation directory of your RKFIT Toolbox and Advanpix Multiprecision Computing Toolbox. `myaddpath.m` is called by all of the above scripts.
