@@ -1,6 +1,6 @@
 ## Uniform-in-time rational approximation of the matrix exponential with real poles
 
-These are the MATLAB codes accompanying the paper of the above title. Some of these files have additional requirements: 
+These are the MATLAB codes accompanying the paper of the above title [1]. Some of these files have additional requirements: 
 
 * Advanpix Multiprecision Toolbox available at https://www.advanpix.com/ needs to be in the MATLAB path
 * MATLAB Rational Krylov Toolbox available at https://guettel.com/rktoolbox/ needs to be in the MATLAB path
@@ -18,3 +18,7 @@ The figures in the paper are reproduced by the following scripts:
 * Figure 8: `drive_total_error_bound.m`
 
 In addition, we provide the script `myaddpath.m`, which should be modified to include the paths with the installation directory of your RKFIT Toolbox and Advanpix Multiprecision Computing Toolbox. `myaddpath.m` is called by all of the above scripts.
+
+**Reference**
+
+[1] S. Güttel and S. Shao. Uniform-in-time rational approximation of the matrix exponential with real poles. Technical Report https://arxiv.org/pdf/2607.18018, 2026.
